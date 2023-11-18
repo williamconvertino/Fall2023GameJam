@@ -31,6 +31,7 @@ public class MultiTargetCamera : MonoBehaviour
     {
         Vector3 centerPoint = GetCenterPoint();
         centerPoint.x = transform.position.x; // Fix x-coordinate
+        centerPoint.y = centerPoint.y + (padding*0.75f);
 
         transform.position = Vector3.SmoothDamp(transform.position, new Vector3(centerPoint.x, centerPoint.y, transform.position.z), ref _moveVelocity, moveSmoothTime);
     }
