@@ -173,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   solidLayerMask:
     serializedVersion: 2
-    m_Bits: 448
+    m_Bits: 192
   headCollisionMask:
     serializedVersion: 2
     m_Bits: 0
