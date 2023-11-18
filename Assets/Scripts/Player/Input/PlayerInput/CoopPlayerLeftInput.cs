@@ -6,7 +6,7 @@ public class CoopPlayerLeftInput : PlayerInput
 {
     protected override void Awake()
     {
-        MovementInput = gameObject.AddComponent<WasdMovementInput>();
+        MovementInput = gameObject.AddComponent<ControllerAndWASDMovementInput>();
         ButtonPress = gameObject.AddComponent<SplitKeyboardLeftPlayerButtonPress>();
     }
 }

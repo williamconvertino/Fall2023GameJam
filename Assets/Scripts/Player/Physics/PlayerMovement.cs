@@ -287,7 +287,6 @@ public class PlayerMovement : MonoBehaviour
     
     private void UpdateJump()
     {
-        print(_canJump + "     " + _isGrounded);
         if (!_wasGrounded && _isGrounded)
         {
             _canJump = true;
