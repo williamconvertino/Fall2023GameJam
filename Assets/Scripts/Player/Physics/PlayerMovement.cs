@@ -255,6 +255,21 @@ public class PlayerMovement : MonoBehaviour
                 startingPoint, Vector2.down, groundingDetectorLength,  solidLayerMask
             ).collider != null
         );
+
+        if (_isGrounded && !_wasGrounded)
+        {
+            Vector2[] detectors = GetDetectorPositions(detectorStartX, detectorEndX, detectorYBottom).ToArray();
+            foreach (Vector2 pos in detectors){
+                Collider2D collider = Physics2D.Raycast(pos, Vector2.down, groundingDetectorLength, solidLayerMask).collider;
+                if (collider != null)
+                {
+                    transform.SetParent(collider.transform);
+                    break;
+                }
+            }
+        }
+        else if (!_isGrounded) { transform.SetParent(null); }
+
         _headCollision = GetDetectorPositions(detectorStartX, detectorEndX, detectorYTop).Any(startingPoint => 
             Physics2D.Raycast(
                 startingPoint, Vector2.up, groundingDetectorLength,  headCollisionMask
