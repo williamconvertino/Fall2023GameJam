@@ -87,3 +87,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTime: 0
   startLoc: {x: 0, y: 0}
+  alpha: 3
+  beta: 0.5
