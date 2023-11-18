@@ -22,7 +22,7 @@ public class MovingPlatform : MonoBehaviour
         transform.position = Position(startLoc, currentTime);
     }
 
-    virtual public Vector2 Position(Vector2 start, float time)
+    virtual public Vector3 Position(Vector2 start, float time)
     {
         return start - new Vector2(0, time);
     }
