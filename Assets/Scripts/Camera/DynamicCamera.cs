@@ -9,21 +9,15 @@ using Vector3 = UnityEngine.Vector3;
 //https://stackoverflow.com/questions/22015697/how-to-keep-2-objects-in-view-at-all-time-by-scaling-the-field-of-view-or-zy/22018593#22018593
 public class DynamicCamera : MonoBehaviour
 {
-    private List<Transform> targets;
+    public List<Transform> targets;
     public float padding = 30f; // amount to pad in world units from screen edge
 
     Camera _camera;
     private bool _initiated = false;
-    public void Init(List<GameObject> players)
-    {
-        targets = new List<Transform>();
-        _camera = Camera.main;
-        foreach (GameObject player in players)
-        {
-            targets.Add(player.transform);
-        }
 
-        _initiated = true;
+    private void Start()
+    {
+        _camera = gameObject.GetComponent<Camera>();
     }
 
     private void LateUpdate() // using LateUpdate() to ensure camera moves after everything else has
