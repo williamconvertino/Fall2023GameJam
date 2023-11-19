@@ -17,8 +17,11 @@ public class RespawnManager : MonoBehaviour
     private RespawnPoint currentRespawnPoint;
     private int respawnIndex = 1;
 
+    private PointManager _pointManager;
+
     private void Start()
     {
+        _pointManager = GetComponent<PointManager>();
         deadPlayers = new List<GameObject>();
         foreach (RespawnPoint point in GetComponentsInChildren<RespawnPoint>())
         {
@@ -81,8 +84,13 @@ public class RespawnManager : MonoBehaviour
             {
                 currentRespawnPoint = respawnPoints[respawnIndex];
                 respawnIndex++;
+                _pointManager.givePoint(player);
+                PlayerInfo info = player.GetComponent<PlayerInfo>();
+                print(info.playerName + " has scored a point! They now have " + _pointManager.getPoints(player) + " points");
                 RespawnPlayers();
             }
+            
+            if (respawnPoints.Count <= respawnIndex) _pointManager.getWinner();
         }
 
     }
