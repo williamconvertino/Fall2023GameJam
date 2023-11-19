@@ -55,6 +55,7 @@ public class MultiTargetCamera : MonoBehaviour
 
     Bounds GetBounds()
     {
+        
         Bounds bounds = new Bounds(targets[0].position, Vector3.zero);
 
         foreach (Transform target in targets)
