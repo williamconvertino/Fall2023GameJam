@@ -1704,7 +1704,6 @@ GameObject:
   - component: {fileID: 650285697}
   - component: {fileID: 650285696}
   - component: {fileID: 650285695}
-  - component: {fileID: 650285698}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1764,18 +1763,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &650285698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 650285694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f5ea2b2eb4e61c4383b8c062cb41842, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &653548582
 GameObject:
   m_ObjectHideFlags: 0
@@ -4668,6 +4655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1985882090}
+  - component: {fileID: 1985882091}
   m_Layer: 0
   m_Name: Spawners
   m_TagString: Untagged
@@ -4695,8 +4683,25 @@ Transform:
   - {fileID: 1795328551}
   - {fileID: 1460761}
   - {fileID: 75474256}
+  - {fileID: 2053159998}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1985882091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985882089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5ea2b2eb4e61c4383b8c062cb41842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players:
+  - {fileID: 2055512944}
+  - {fileID: 1972629921}
+  heightDiff: 35
 --- !u!1 &2053159997
 GameObject:
   m_ObjectHideFlags: 0
@@ -4721,8 +4726,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053159997}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4678789, y: 3.0166898, z: -0.012179134}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.1110094, y: -55.643177, z: 0.14078006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4737,7 +4742,7 @@ Transform:
   - {fileID: 115736706}
   - {fileID: 1670999702}
   - {fileID: 861390667}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1985882090}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2055512943
 PrefabInstance:
@@ -5631,7 +5636,6 @@ SceneRoots:
   - {fileID: 1972629920}
   - {fileID: 653548583}
   - {fileID: 490018829}
-  - {fileID: 2053159998}
   - {fileID: 2081999275}
   - {fileID: 1002123368}
   - {fileID: 1538462399}
