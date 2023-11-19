@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Death
+  - Branch
   layers:
   - Default
   - TransparentFX
@@ -42,14 +43,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Ground
-    uniqueID: 408995485
-    locked: 0
   - name: Branch
     uniqueID: 3719042291
     locked: 0
   - name: Leaf
     uniqueID: 2353294789
+    locked: 0
+  - name: Ground
+    uniqueID: 408995485
     locked: 0
   - name: Player
     uniqueID: 1716248097

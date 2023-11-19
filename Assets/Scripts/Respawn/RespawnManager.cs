@@ -23,8 +23,12 @@ public class RespawnManager : MonoBehaviour
     {
         _pointManager = GetComponent<PointManager>();
         deadPlayers = new List<GameObject>();
-        foreach (RespawnPoint point in GetComponentsInChildren<RespawnPoint>())
+
+        GameObject[] branches = GameObject.FindGameObjectsWithTag("Branch");
+        
+        foreach (GameObject branch in branches)
         {
+            RespawnPoint point = branch.GetComponent<RespawnPoint>();
             respawnPoints.Add(point);    
         }
         
@@ -83,6 +87,7 @@ public class RespawnManager : MonoBehaviour
             if (player.transform.position.y > respawnPoints[respawnIndex].transform.position.y)
             {
                 currentRespawnPoint = respawnPoints[respawnIndex];
+                currentRespawnPoint.TurnOff();
                 respawnIndex++;
                 _pointManager.givePoint(player);
                 PlayerInfo info = player.GetComponent<PlayerInfo>();

@@ -21,6 +21,8 @@ public class Spawner : MonoBehaviour
 
     private System.Random rand;
 
+    public bool active = true;
+
     public float leftbound;
     public float rightbound;
 
@@ -37,6 +39,7 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!active) return;
         
         if (rand.NextDouble() <= brownRate * Time.deltaTime) SpawnLeaf(brownLeaf);
         if (rand.NextDouble() <= yellowRate * Time.deltaTime) SpawnLeaf(yellowLeaf);
