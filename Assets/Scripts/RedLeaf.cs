@@ -8,7 +8,7 @@ using System;
 public class RedLeaf : MovingPlatform
 {
     public int numJumps;
-    private void Update()
+    public override void Update()
     {
         currentTime += Time.deltaTime;
         transform.position = Position(startLoc, currentTime);

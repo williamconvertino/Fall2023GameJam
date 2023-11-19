@@ -10,7 +10,7 @@ public class YellowLeaf : MovingPlatform
 
     public float alpha;
     public float beta;
-    private void Awake()
+    public override void Awake()
     {
         System.Random rand = new System.Random();
         base.currentTime = (float) (6.28 * rand.NextDouble());
