@@ -45,7 +45,7 @@ public class Spawner : MonoBehaviour
     {
         if (!active) return;
 
-        float weight = 1 + (transform.position.y - prevHeight) * Time.deltaTime;
+        float weight = 1 + 5*(transform.position.y - prevHeight) * Time.deltaTime;
         if (rand.NextDouble()*weight <= brownRate * Time.deltaTime) SpawnLeaf(brownLeaf);
         if (rand.NextDouble() * weight <= yellowRate * Time.deltaTime) SpawnLeaf(yellowLeaf);
         if (rand.NextDouble() * weight <= orangeRate * Time.deltaTime) SpawnLeaf(orangeLeaf);
