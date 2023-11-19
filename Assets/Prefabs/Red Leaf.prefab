@@ -14,15 +14,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3334029955920578771, guid: e41f4e17cef1b404e9247a9899320755, type: 3}
       propertyPath: m_Color.b
-      value: 0.36113095
+      value: 0.01796345
       objectReference: {fileID: 0}
     - target: {fileID: 3334029955920578771, guid: e41f4e17cef1b404e9247a9899320755, type: 3}
       propertyPath: m_Color.g
-      value: 0.06407974
+      value: 0.014175847
       objectReference: {fileID: 0}
     - target: {fileID: 3334029955920578771, guid: e41f4e17cef1b404e9247a9899320755, type: 3}
       propertyPath: m_Color.r
-      value: 0.9056604
+      value: 0.6830188
       objectReference: {fileID: 0}
     - target: {fileID: 7387158727548903360, guid: e41f4e17cef1b404e9247a9899320755, type: 3}
       propertyPath: m_LocalPosition.x
@@ -91,3 +91,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTime: 0
   startLoc: {x: 0, y: 0}
+  fallrate: 0
+  numJumps: 0
