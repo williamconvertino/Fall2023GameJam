@@ -1,23 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PointManager : MonoBehaviour
 {
     public List<GameObject> players;
     private Dictionary<GameObject, int> scores = new Dictionary<GameObject, int>();
 
+    // UI
+    public List<TMPro.TextMeshProUGUI> scoreTexts;
+    private Dictionary<GameObject, TMPro.TextMeshProUGUI> textMeshes = new Dictionary<GameObject, TMPro.TextMeshProUGUI>();
+
     void Start()
     {
-        foreach (var pl in players)
+        for (int i = 0; i < players.Count; i++)
         {
-            scores[pl] = 0;
+            GameObject player = players[i];
+            scores[player] = 0;
+            textMeshes[player] = scoreTexts[i];
+            scoreTexts[i].text = player.name + ": 0";
         }
     }
+
     public void givePoint(GameObject player)
     {
         if (!scores.ContainsKey(player)) scores[player] = 0;
         scores[player]++;
+        TMPro.TextMeshProUGUI textToUpdate = textMeshes[player];
+        textToUpdate.text = player.name + ": " + scores[player].ToString();
     }
 
     public int getPoints(GameObject player)
