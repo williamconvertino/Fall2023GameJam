@@ -29,6 +29,7 @@ public class RespawnManager : MonoBehaviour
         foreach (GameObject branch in branches)
         {
             RespawnPoint point = branch.GetComponent<RespawnPoint>();
+            if (point == null) continue;
             respawnPoints.Add(point);    
         }
         

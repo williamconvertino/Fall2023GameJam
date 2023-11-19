@@ -31,6 +31,7 @@ public class Spawner : MonoBehaviour
         rand = new System.Random();
         Collider2D collider = GetComponent<BoxCollider2D>();
         if (collider == null) return;
+
         Bounds b = collider.bounds;
         leftbound = b.min.x;
         rightbound = b.max.x;
