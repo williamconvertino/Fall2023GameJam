@@ -28,7 +28,8 @@ public class PlayerMovement : MonoBehaviour
         _boxCollider = GetComponent<BoxCollider2D>();
         _playerMovementInput = GetComponentInChildren<PlayerMovementInput>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
-
+        _animator = GetComponent<Animator>();
+        
         InitializeAnimation();
 
     }
@@ -50,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speedScale = 6.0f;
     [SerializeField] private float jumpScale = 25.0f;
 
+    public int invertX = -1;
+    
     private Vector2 _velocity = Vector2.zero;
     public Vector2 GetVelocity => _velocity;
     private int _directionX = 1;
@@ -87,12 +90,14 @@ public class PlayerMovement : MonoBehaviour
     public Sprite[] runFrames; 
     public Sprite[] fallFrames; 
     private List<Sprite[]> allSprites;
-    private bool doAnimation = true;
+    private bool doAnimation = false;
 
     public int currentAnimation;
     public int currentFrame;
     public float framesPerSecond = 10;
     private float frameTimer;
+
+    private Animator _animator;
 
     private void InitializeAnimation()
     {
@@ -113,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
         //flip the animation if it is going left in any way
        
         //if character is on the ground
-        if(_directionX == -1)
+        if(_directionX * invertX == -1)
         {
             _spriteRenderer.flipX = true;
         }
@@ -124,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
         //if the character is in the air
         if (!_isGrounded)
         {
-            if (_directionX == -1)
+            if (_directionX * invertX == -1)
             {
                 _spriteRenderer.flipX = true;
             }
@@ -155,7 +160,7 @@ public class PlayerMovement : MonoBehaviour
                 currentAnimation = 1;
 
                 //if it's going left, flip the animation 
-                if(_input.DirX < 0)
+                if(_input.DirX * invertX < 0)
                 {
                     _spriteRenderer.flipX = true;
                 }
@@ -223,6 +228,21 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             _velocity.y = Mathf.Max(_velocity.y, -maxFallSpeed);
+        }
+
+        if (!_isGrounded && _velocity.y > 0)
+        {
+            _animator.Play("MouseJump");
+        } else if (!_isGrounded && _velocity.y <= 0)
+        {
+            _animator.Play("MouseFall");
+        } else if (_isGrounded && _velocity.x == 0)
+        {
+            _animator.Play("MouseIdle");
+        }
+        else
+        {
+            _animator.Play("MouseRun");
         }
     }
 
