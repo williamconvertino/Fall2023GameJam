@@ -19,7 +19,8 @@ public class PointManager : MonoBehaviour
             GameObject player = players[i];
             scores[player] = 0;
             textMeshes[player] = scoreTexts[i];
-            scoreTexts[i].text = player.name + ": 0";
+            PlayerInfo info = player.GetComponent<PlayerInfo>();
+            scoreTexts[i].text = info.name + ": 0";
         }
     }
 
@@ -28,7 +29,8 @@ public class PointManager : MonoBehaviour
         if (!scores.ContainsKey(player)) scores[player] = 0;
         scores[player]++;
         TMPro.TextMeshProUGUI textToUpdate = textMeshes[player];
-        textToUpdate.text = player.name + ": " + scores[player].ToString();
+        PlayerInfo info = player.GetComponent<PlayerInfo>();
+        textToUpdate.text = info.name + ": " + scores[player].ToString();
     }
 
     public int getPoints(GameObject player)
