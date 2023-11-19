@@ -15,17 +15,15 @@ public class RespawnPoint : MonoBehaviour
         _boxCollider2D.enabled = false;
     }
 
-    private Vector3 GeneratePosition()
+    public void SpawnPlayers(List<GameObject> players)
     {
-        Vector3 finalPos = Vector3.zero;
-        finalPos.x = Random.Range(_bounds.min.x, _bounds.max.x);
-        finalPos.y = (_bounds.max.y + _bounds.min.y) / 2.0f;
-        return finalPos;
-    }
-    
-    public void SpawnPlayer(GameObject player)
-    {
-        player.transform.position = GeneratePosition();
-        player.SetActive(true);
+        float interval = (_bounds.max.x - _bounds.min.x) / (players.Count + 1);
+        
+        for (int i = 0; i < players.Count; i++)
+        {
+            GameObject player = players[i];
+            player.SetActive(true);
+            player.transform.position = new Vector3(_bounds.min.x+(interval*(i+1)),(_bounds.max.y + _bounds.min.y) / 2.0f,0);
+        }
     }
 }
