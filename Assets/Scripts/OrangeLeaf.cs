@@ -30,7 +30,7 @@ public class OrangeLeaf : MovingPlatform
 
     public void OnTransformChildrenChanged()
     {
-        gamma = transform.childCount;
+        gamma = 0.5f * transform.childCount;
         base.startLoc = 2 * transform.position - Position(transform.position, base.currentTime);
         
     }
