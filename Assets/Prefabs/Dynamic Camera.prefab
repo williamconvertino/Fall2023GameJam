@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targets: []
-  minSize: 7
-  padding: 5
+  minSize: 8
+  padding: 6
   moveSmoothTime: 0.3
   zoomSmoothTime: 0.5

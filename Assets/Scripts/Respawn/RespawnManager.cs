@@ -34,7 +34,8 @@ public class RespawnManager : MonoBehaviour
     {
         UpdatePlayerDeath();
         UpdateRespawnPoints();
-        if (deadPlayers.Count == players.Count) RespawnPlayers();
+        //if (deadPlayers.Count == players.Count) RespawnPlayers();
+        RespawnPlayers();
     }
 
     private void UpdatePlayerDeath()
@@ -85,7 +86,7 @@ public class RespawnManager : MonoBehaviour
     private void RespawnPlayers()
     {
         if (currentRespawnPoint == null) return;
-        
+        if (deadPlayers.Count == 0) return;
         currentRespawnPoint.SpawnPlayers(deadPlayers);
         deadPlayers.Clear();
     }
