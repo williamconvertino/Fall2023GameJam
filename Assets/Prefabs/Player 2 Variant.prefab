@@ -56,13 +56,21 @@ PrefabInstance:
       propertyPath: playerName
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6382054093466732045, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 053f80e4bd3f28747bc6ab6598f097a6, type: 2}
+    - target: {fileID: 7811422173316548256, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1677697186, guid: a7733446736ea37429e0b8f9dab9f778, type: 3}
     - target: {fileID: 7811422173316548256, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
       propertyPath: m_Color.b
-      value: 0.9898639
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7811422173316548256, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
       propertyPath: m_Color.g
-      value: 0.7754717
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7811422173316548256, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
       propertyPath: m_Color.r
