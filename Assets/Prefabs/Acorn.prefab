@@ -26,11 +26,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5804532207161920169, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.70000005
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5804532207161920169, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.70000005
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5804532207161920169, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -93,6 +93,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2596317393918919082, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1143573825021173707}
+    - targetCorrespondingSourceObject: {fileID: 2596317393918919082, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4811090682166282723}
   m_SourcePrefab: {fileID: 100100000, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
 --- !u!1 &5638072172751500179 stripped
 GameObject:
@@ -129,3 +132,39 @@ MonoBehaviour:
   currentTime: 0
   startLoc: {x: 0, y: 0}
   fallrate: 0
+  rotationSpeed: 50
+--- !u!58 &4811090682166282723
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5638072172751500179}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0051363925, y: -0.0046659363}
+  serializedVersion: 2
+  m_Radius: 0.06697213
