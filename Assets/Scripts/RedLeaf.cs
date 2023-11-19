@@ -7,14 +7,20 @@ using System;
 
 public class RedLeaf : MovingPlatform
 {
-    public int numJumps;
+    public float stand_time;
+    public int num_children;
     public override void Update()
     {
-        currentTime += Time.deltaTime;
-        transform.position = Position(startLoc, currentTime);
+        base.Update();
+
+        if (transform.childCount > 0)
+        {
+            stand_time += Time.deltaTime;
+        }
+        else stand_time = 0;
 
         // check if object has child
-        if (transform.childCount > 0) {
+        if (stand_time > 0.1f) { 
             // fades and then destroys the leaf
             StartCoroutine(Fade());
         }

@@ -25,12 +25,12 @@ public class OrangeLeaf : MovingPlatform
     public override Vector3 Position(Vector2 start, float time)
     {
         float sin = (float)System.Math.Sin(time);
-        return start + new Vector2(alpha * sin, sin * sin - beta * (time + sin));
+        return start + new Vector2(alpha * sin, sin * sin - beta * (time));
     }
 
     public void OnTransformChildrenChanged()
     {
-        gamma = 0.5f * transform.childCount;
+        gamma = 2 * transform.childCount;
         base.startLoc = 2 * transform.position - Position(transform.position, base.currentTime);
         
     }
