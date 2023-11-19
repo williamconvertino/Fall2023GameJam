@@ -42,3 +42,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 408995485
+    locked: 0
+  - name: Branch
+    uniqueID: 3719042291
+    locked: 0
+  - name: Leaf
+    uniqueID: 2353294789
+    locked: 0
+  - name: Player
+    uniqueID: 1716248097
+    locked: 0
+  - name: Trunk
+    uniqueID: 1189579185
+    locked: 0
