@@ -181,7 +181,7 @@ MonoBehaviour:
     m_Bits: 256
   speedScale: 6
   jumpScale: 25
-  invertX: 1
+  invertX: -1
   idleFrames: []
   upFrames: []
   runFrames: []

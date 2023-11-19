@@ -4370,10 +4370,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8598814782859584474, guid: 78f592c6c7c344840b5bf3d596ce6997, type: 3}
-      propertyPath: invertX
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8598814782859584474, guid: 78f592c6c7c344840b5bf3d596ce6997, type: 3}
       propertyPath: upFrames.Array.size
       value: 2
       objectReference: {fileID: 0}
