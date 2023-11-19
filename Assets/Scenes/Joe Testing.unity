@@ -154,12 +154,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brownLeaf: {fileID: 2596317393918919082, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
   yellowLeaf: {fileID: 5586061375301131604, guid: 36db7ca5be4aee841a4457941300535c, type: 3}
-  orangeLeaf: {fileID: 0}
+  orangeLeaf: {fileID: 2596317393918919082, guid: 1ad557b75600218499cf95ec1a0618d3, type: 3}
   redLeaf: {fileID: 0}
   hazzards: []
-  brownRate: 0.3
+  brownRate: 0.2
   yellowRate: 0.15
-  orangeRate: 0
+  orangeRate: 0.2
   redRate: 0
   hazzardRate: 0
   leftbound: -10
