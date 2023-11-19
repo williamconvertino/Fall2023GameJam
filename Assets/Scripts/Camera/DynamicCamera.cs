@@ -55,12 +55,26 @@ public class MultiTargetCamera : MonoBehaviour
 
     Bounds GetBounds()
     {
+        List<Transform> activeTransforms = new List<Transform>();
         
-        Bounds bounds = new Bounds(targets[0].position, Vector3.zero);
-
         foreach (Transform target in targets)
         {
-            bounds.Encapsulate(target.position);
+            if (target.gameObject.activeSelf)
+            {
+                activeTransforms.Add(target);
+            }
+        }
+
+        if (activeTransforms.Count == 0)
+        {
+            return new Bounds(targets[0].position, Vector3.zero);
+        }
+        
+        Bounds bounds = new Bounds(activeTransforms[0].position, Vector3.zero);
+
+        foreach (Transform target in activeTransforms)
+        {
+                bounds.Encapsulate(target.position);
         }
 
         return bounds;
