@@ -48,6 +48,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 521227856015177834, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
+      propertyPath: upFrames.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 521227856015177834, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
+      propertyPath: runFrames.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 521227856015177834, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
+      propertyPath: fallFrames.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 521227856015177834, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
+      propertyPath: idleFrames.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 521227856015177834, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
+      propertyPath: upFrames.Array.data[0]
+      value: 
+      objectReference: {fileID: 980245684, guid: d5700a9fa796e8d469d190f390c1ed60, type: 3}
+    - target: {fileID: 521227856015177834, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
+      propertyPath: runFrames.Array.data[0]
+      value: 
+      objectReference: {fileID: 1954117031, guid: d5700a9fa796e8d469d190f390c1ed60, type: 3}
+    - target: {fileID: 521227856015177834, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
+      propertyPath: runFrames.Array.data[1]
+      value: 
+      objectReference: {fileID: -2139486283, guid: d5700a9fa796e8d469d190f390c1ed60, type: 3}
+    - target: {fileID: 521227856015177834, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
+      propertyPath: runFrames.Array.data[2]
+      value: 
+      objectReference: {fileID: 1976420533, guid: d5700a9fa796e8d469d190f390c1ed60, type: 3}
+    - target: {fileID: 521227856015177834, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
+      propertyPath: fallFrames.Array.data[0]
+      value: 
+      objectReference: {fileID: -986946603, guid: d5700a9fa796e8d469d190f390c1ed60, type: 3}
+    - target: {fileID: 521227856015177834, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
+      propertyPath: idleFrames.Array.data[0]
+      value: 
+      objectReference: {fileID: -2139486283, guid: d5700a9fa796e8d469d190f390c1ed60, type: 3}
     - target: {fileID: 2722617429040487620, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
       propertyPath: m_Name
       value: Player 1 Variant
@@ -58,15 +98,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7811422173316548256, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
       propertyPath: m_Color.b
-      value: 0.64705884
+      value: 0.97431475
       objectReference: {fileID: 0}
     - target: {fileID: 7811422173316548256, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
       propertyPath: m_Color.g
-      value: 0.64191204
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7811422173316548256, guid: 7db3aeb6f254e804fbeb17cb07350ec5, type: 3}
       propertyPath: m_Color.r
-      value: 0.26666668
+      value: 0.65471697
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
