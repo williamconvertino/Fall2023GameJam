@@ -1,16 +1,12 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 9fca2c209d982714581f85edc53e44e4
-=======
-guid: 497f032d228f2fc4a9cf99df63f61e11
->>>>>>> a16ea0cd96dd505b73ec6972b98d79b4752e656d
+guid: 48c709fb256b87b439f99b7b7a40e20a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -85,7 +81,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-<<<<<<< HEAD
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -99,8 +94,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-=======
->>>>>>> a16ea0cd96dd505b73ec6972b98d79b4752e656d
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
