@@ -1433,7 +1433,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-<<<<<<< HEAD
 --- !u!1 &1927901397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,8 +1517,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-=======
->>>>>>> 54c9aec10a6ef06a54d3e8757d44d6fad8945b9d
 --- !u!1001 &1972629920
 PrefabInstance:
   m_ObjectHideFlags: 0
