@@ -1033,8 +1033,9 @@ GameObject:
   m_Component:
   - component: {fileID: 567529392}
   - component: {fileID: 567529393}
+  - component: {fileID: 567529394}
   m_Layer: 0
-  m_Name: Respawn Manager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1078,6 +1079,21 @@ MonoBehaviour:
   - {fileID: 1225519431}
   - {fileID: 928672674}
   respawnPoints: []
+--- !u!114 &567529394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567529391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ab3fa6371e890b4ea95531543ffd510, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players:
+  - {fileID: 1225519431}
+  - {fileID: 928672674}
 --- !u!1 &641707542
 GameObject:
   m_ObjectHideFlags: 0

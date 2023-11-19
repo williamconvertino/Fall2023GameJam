@@ -270,7 +270,7 @@ public class PlayerMovement : MonoBehaviour
 
                 bool groundHit = groundCollider != null;
                 bool playerHit = playerCollider != null && playerCollider.gameObject != gameObject;
-                
+
                 return groundHit || playerHit;
             }
         );

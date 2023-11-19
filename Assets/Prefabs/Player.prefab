@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5417709382666301251}
   - component: {fileID: 7164867519191982663}
   - component: {fileID: 521227856015177834}
+  - component: {fileID: 5404177488481060600}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -192,4 +193,21 @@ MonoBehaviour:
   jumpApexThreshold: 10
   numGroundingDetectors: 3
   groundingDetectorLength: 0.02
+  allowDoubleJump: 0
+  doubleJumpVel: 20
+  jumpMaxVel: 25
   coyoteJumpTime: 0.15
+--- !u!114 &5404177488481060600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2722617429040487620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2b37ae06402e54cb0e704f428fb5d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: Player
+  playerID: 999
