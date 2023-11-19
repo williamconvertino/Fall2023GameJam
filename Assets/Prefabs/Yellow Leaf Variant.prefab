@@ -13,12 +13,32 @@ PrefabInstance:
       value: Yellow Leaf Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3334029955920578771, guid: e41f4e17cef1b404e9247a9899320755, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 44e53f6f5e11f0d488440f0a9fc79793, type: 3}
+    - target: {fileID: 3334029955920578771, guid: e41f4e17cef1b404e9247a9899320755, type: 3}
       propertyPath: m_Color.b
       value: 0.172549
       objectReference: {fileID: 0}
     - target: {fileID: 3334029955920578771, guid: e41f4e17cef1b404e9247a9899320755, type: 3}
       propertyPath: m_Color.r
       value: 0.91487116
+      objectReference: {fileID: 0}
+    - target: {fileID: 5675288765031451339, guid: e41f4e17cef1b404e9247a9899320755, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5675288765031451339, guid: e41f4e17cef1b404e9247a9899320755, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7387158727548903360, guid: e41f4e17cef1b404e9247a9899320755, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7387158727548903360, guid: e41f4e17cef1b404e9247a9899320755, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7387158727548903360, guid: e41f4e17cef1b404e9247a9899320755, type: 3}
       propertyPath: m_LocalPosition.x
@@ -87,5 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTime: 0
   startLoc: {x: 0, y: 0}
+  fallrate: 0
   alpha: 3
   beta: 0.5
