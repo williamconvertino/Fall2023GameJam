@@ -26,6 +26,8 @@ public class Spawner : MonoBehaviour
     public float leftbound;
     public float rightbound;
 
+    private float prevHeight;
+
     private void Start()
     {
         rand = new System.Random();
@@ -35,17 +37,19 @@ public class Spawner : MonoBehaviour
         Bounds b = collider.bounds;
         leftbound = b.min.x;
         rightbound = b.max.x;
+        prevHeight = transform.position.y;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (!active) return;
-        
-        if (rand.NextDouble() <= brownRate * Time.deltaTime) SpawnLeaf(brownLeaf);
-        if (rand.NextDouble() <= yellowRate * Time.deltaTime) SpawnLeaf(yellowLeaf);
-        if (rand.NextDouble() <= orangeRate * Time.deltaTime) SpawnLeaf(orangeLeaf);
-        if (rand.NextDouble() <= redRate * Time.deltaTime) SpawnLeaf(redLeaf);
+
+        float weight = 1 + (transform.position.y - prevHeight) * Time.deltaTime;
+        if (rand.NextDouble()*weight <= brownRate * Time.deltaTime) SpawnLeaf(brownLeaf);
+        if (rand.NextDouble() * weight <= yellowRate * Time.deltaTime) SpawnLeaf(yellowLeaf);
+        if (rand.NextDouble() * weight <= orangeRate * Time.deltaTime) SpawnLeaf(orangeLeaf);
+        if (rand.NextDouble() * weight <= redRate * Time.deltaTime) SpawnLeaf(redLeaf);
     }
 
     void SpawnLeaf(GameObject leafPrefab) {
