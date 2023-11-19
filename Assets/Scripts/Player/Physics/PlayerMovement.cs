@@ -256,7 +256,7 @@ public class PlayerMovement : MonoBehaviour
             ).collider != null
         );
 
-        if (_isGrounded && !_wasGrounded)
+        if (_isGrounded)
         {
             Vector2[] detectors = GetDetectorPositions(detectorStartX, detectorEndX, detectorYBottom).ToArray();
             foreach (Vector2 pos in detectors){
@@ -268,7 +268,7 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
         }
-        else if (!_isGrounded) { transform.SetParent(null); }
+        else{ transform.SetParent(null); }
 
         _headCollision = GetDetectorPositions(detectorStartX, detectorEndX, detectorYTop).Any(startingPoint => 
             Physics2D.Raycast(

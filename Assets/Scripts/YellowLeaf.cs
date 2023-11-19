@@ -7,6 +7,9 @@ using System;
 
 public class YellowLeaf : MovingPlatform
 {
+
+    public float alpha;
+    public float beta;
     private void Awake()
     {
         System.Random rand = new System.Random();
@@ -15,6 +18,6 @@ public class YellowLeaf : MovingPlatform
     }
     public override Vector3 Position(Vector2 start, float time){
         float sin = (float)Math.Sin(time);
-        return start + new Vector2(3 * sin, sin * sin - (time + sin));
+        return start + new Vector2(alpha * sin, sin * sin - beta*(time + sin));
     }
 }
