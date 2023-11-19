@@ -152,15 +152,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed5fe27e35729c4b8e916dd7591f02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patterns:
-  - {fileID: 4261944990855484649, guid: 871217396115e4649bec06d291c217ae, type: 3}
+  patterns: []
   leaves:
   - {fileID: 2596317393918919082, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
   - {fileID: 5586061375301131604, guid: 36db7ca5be4aee841a4457941300535c, type: 3}
   hazzards: []
-  leafRate: 1
+  leafRate: 0.5
   hazzardRate: 0
-  patternRate: 0.1
+  patternRate: 0
   patternCooldown: 5
   leftbound: -10
   rightbound: 10

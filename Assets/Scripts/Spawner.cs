@@ -1,21 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class Spawner : MonoBehaviour
 {
-    public List<GameObject> patterns;
-    public List<GameObject> leaves;
+    public GameObject brownLeaf;
+    public GameObject yellowLeaf;
+    public GameObject orangeLeaf;
+    public GameObject redLeaf;
     public List<GameObject> hazzards;
-    public float leafRate;
-    public float hazzardRate;
-    public float patternRate;
-    public float patternCooldown;
 
-    private List<GameObject> onCooldown;
-    private List<float> cooldowns;
+    public float brownRate;
+    public float yellowRate;
+    public float orangeRate;
+    public float redRate;
+    
+    public float hazzardRate;
 
     private System.Random rand;
 
@@ -30,28 +33,15 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cooldowns[0] = cooldowns[0] - Time.deltaTime;
-        while (cooldowns.Count > 0 && cooldowns[0] <= 0)
-        {
-            patterns.Add(onCooldown[0]);
-            onCooldown.RemoveAt(0);
-            cooldowns.RemoveAt(0);
-        }
-        if (rand.NextDouble() <= leafRate * Time.deltaTime) SpawnLeaf();
-        if (patterns.Count > 0 && rand.NextDouble() <= patternRate * Time.deltaTime) SpawnPattern();
+        
+        if (rand.NextDouble() <= brownRate * Time.deltaTime) SpawnLeaf(brownLeaf);
+        if (rand.NextDouble() <= yellowRate * Time.deltaTime) SpawnLeaf(yellowLeaf);
+        if (rand.NextDouble() <= orangeRate * Time.deltaTime) SpawnLeaf(orangeLeaf);
+        if (rand.NextDouble() <= redRate * Time.deltaTime) SpawnLeaf(redLeaf);
     }
 
-    void SpawnPattern()
-    {
-        int index = rand.Next(patterns.Count);
-        GameObject pattern = Instantiate(patterns[index], transform);
-        onCooldown.Add(patterns[index]);
-        // incomplete
-    }
-
-    void SpawnLeaf() {
-        int index = rand.Next(leaves.Count);
-        MovingPlatform leaf = Instantiate(leaves[index], transform).GetComponent<MovingPlatform>();
+    void SpawnLeaf(GameObject leafPrefab) {
+        MovingPlatform leaf = Instantiate(leafPrefab, transform).GetComponent<MovingPlatform>();
         leaf.startLoc = new Vector2(leftbound + (float)rand.NextDouble() * (rightbound - leftbound), transform.position.y);
     }
 
