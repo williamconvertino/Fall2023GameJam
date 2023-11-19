@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpawnerManager : MonoBehaviour
 {
+    Spawner
     // Start is called before the first frame update
     void Start()
     {
