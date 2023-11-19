@@ -92,6 +92,6 @@ MonoBehaviour:
   currentTime: 0
   startLoc: {x: 0, y: 0}
   fallrate: 0
-  alpha: 2
-  beta: 2
+  alpha: 0.5
+  beta: 1
   gamma: 0
