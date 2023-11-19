@@ -51,7 +51,11 @@ public class RespawnManager : MonoBehaviour
         foreach (GameObject player in players)
         {
             if (!player.activeSelf) continue;
-            if (topPlayer.transform.position.y - player.transform.position.y > maxDistance || currentRespawnPoint.transform.position.y - player.transform.position.y > maxRespawnPointDistance)
+            if (topPlayer.transform.position.y - player.transform.position.y > maxDistance)
+            {
+                //Kill(player);
+            }
+            if (currentRespawnPoint.transform.position.y - player.transform.position.y > maxRespawnPointDistance)
             {
                 Kill(player);
             }

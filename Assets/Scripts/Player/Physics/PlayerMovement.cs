@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     #region Core
     [Header("Interaction Masks")]
     [SerializeField] private LayerMask solidLayerMask;
-    [SerializeField] private LayerMask headCollisionMask;
+    [SerializeField] private LayerMask playerLayerMask;
     
     private Rigidbody2D _rb2d;
     private BoxCollider2D _boxCollider;
@@ -250,10 +250,22 @@ public class PlayerMovement : MonoBehaviour
         float detectorYTop = bounds.max.y;
         float detectorYBottom = bounds.min.y;
         
-        _isGrounded = GetDetectorPositions(detectorStartX, detectorEndX, detectorYBottom).Any(startingPoint => 
-            Physics2D.Raycast(
-                startingPoint, Vector2.down, groundingDetectorLength,  solidLayerMask
-            ).collider != null
+        
+        _isGrounded = GetDetectorPositions(detectorStartX, detectorEndX, detectorYBottom).Any(startingPoint =>
+            {
+                Collider2D groundCollider = Physics2D.Raycast(
+                    startingPoint, Vector2.down, groundingDetectorLength, solidLayerMask
+                ).collider;
+                
+                Collider2D playerCollider = Physics2D.Raycast(
+                    startingPoint, Vector2.down, groundingDetectorLength, playerLayerMask
+                ).collider;
+
+                bool groundHit = groundCollider != null;
+                bool playerHit = playerCollider != null && playerCollider.gameObject != gameObject;
+                
+                return groundHit || playerHit;
+            }
         );
 
         if (_isGrounded)
@@ -270,11 +282,13 @@ public class PlayerMovement : MonoBehaviour
         }
         else{ transform.SetParent(null); }
 
+        /*
         _headCollision = GetDetectorPositions(detectorStartX, detectorEndX, detectorYTop).Any(startingPoint => 
             Physics2D.Raycast(
                 startingPoint, Vector2.up, groundingDetectorLength,  headCollisionMask
             ).collider != null
         );
+    */
     }
 
     private IEnumerable<Vector2> GetDetectorPositions(float detectorStartX, float detectorEndX, float detectorY)
