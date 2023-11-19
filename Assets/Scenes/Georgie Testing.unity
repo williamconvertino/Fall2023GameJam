@@ -1699,41 +1699,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1751188201829146042, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b89356a16959a6b4d933b4137838e83a, type: 3}
-    - target: {fileID: 1751188201829146042, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1751188201829146042, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1751188201829146042, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1751188201829146042, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2596317393918919082, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
       propertyPath: m_Name
       value: Brown Leaf (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2596317393918919082, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5804532207161920169, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5804532207161920169, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5804532207161920169, guid: 63080318e2111804a8f18f99a2e376f6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1789,14 +1757,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3791472125236432256, guid: e423285728851361190d5254ac3d0097, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3791472125236432256, guid: e423285728851361190d5254ac3d0097, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3791472125236432256, guid: e423285728851361190d5254ac3d0097, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.037135
       objectReference: {fileID: 0}
@@ -1839,22 +1799,6 @@ PrefabInstance:
     - target: {fileID: 4617364374338963075, guid: e423285728851361190d5254ac3d0097, type: 3}
       propertyPath: m_Name
       value: Red Leaf (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8961790397446724243, guid: e423285728851361190d5254ac3d0097, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 77809309b72aeee4da10169ef0a600e1, type: 3}
-    - target: {fileID: 8961790397446724243, guid: e423285728851361190d5254ac3d0097, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8961790397446724243, guid: e423285728851361190d5254ac3d0097, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8961790397446724243, guid: e423285728851361190d5254ac3d0097, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2394,12 +2338,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1245625937510318940, guid: 36db7ca5be4aee841a4457941300535c, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.45628878
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245625937510318940, guid: 36db7ca5be4aee841a4457941300535c, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.66638464
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245625937510318940, guid: 36db7ca5be4aee841a4457941300535c, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245625937510318940, guid: 36db7ca5be4aee841a4457941300535c, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245625937510318940, guid: 36db7ca5be4aee841a4457941300535c, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245625937510318940, guid: 36db7ca5be4aee841a4457941300535c, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245625937510318940, guid: 36db7ca5be4aee841a4457941300535c, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 20
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 1245625937510318940, guid: 36db7ca5be4aee841a4457941300535c, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 20
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 4111648580934915671, guid: 36db7ca5be4aee841a4457941300535c, type: 3}
       propertyPath: m_LocalScale.x
@@ -2456,7 +2424,7 @@ PrefabInstance:
     - target: {fileID: 8200823698724192580, guid: 36db7ca5be4aee841a4457941300535c, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 44e53f6f5e11f0d488440f0a9fc79793, type: 3}
+      objectReference: {fileID: 21300000, guid: 41c7f21d372ad4a3ab9b11b4a742458a, type: 3}
     - target: {fileID: 8200823698724192580, guid: 36db7ca5be4aee841a4457941300535c, type: 3}
       propertyPath: m_Enabled
       value: 1
