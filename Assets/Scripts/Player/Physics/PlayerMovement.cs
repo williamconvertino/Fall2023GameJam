@@ -239,6 +239,13 @@ public class PlayerMovement : MonoBehaviour
     private bool _headCollision = false;
     private bool _wasHeadCollision = false;
 
+    [Header("Double Jump")]
+    
+    public bool allowDoubleJump = false;
+    public float doubleJumpVel = 20.0f;
+    public float jumpMaxVel = 25.0f;
+    private bool _doubleJumpActive = true;
+
     private void CheckGrounding()
     {
         _wasGrounded = _isGrounded;
@@ -270,6 +277,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (_isGrounded)
         {
+            _doubleJumpActive = true;
             Vector2[] detectors = GetDetectorPositions(detectorStartX, detectorEndX, detectorYBottom).ToArray();
             foreach (Vector2 pos in detectors){
                 Collider2D collider = Physics2D.Raycast(pos, Vector2.down, groundingDetectorLength, solidLayerMask).collider;
@@ -334,6 +342,20 @@ public class PlayerMovement : MonoBehaviour
         {
             _canJump = false;
             _velocity.y = jumpScale;
+        }
+        
+        if (allowDoubleJump && !_isGrounded && _doubleJumpActive && _input.DoJump)
+        {
+            _canJump = false;
+            _doubleJumpActive = false;
+            if (_velocity.y < 0)
+            {
+                _velocity.y = doubleJumpVel;
+            }
+            else
+            {
+                _velocity.y = Mathf.Min(doubleJumpVel + _velocity.y, jumpMaxVel);
+            }
         }
 
     }
